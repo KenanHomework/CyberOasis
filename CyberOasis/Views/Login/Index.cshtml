@@ -1,0 +1,102 @@
+﻿@model Views_Login_Index
+@{
+    Layout = "~/Views/Shared/_LayoutWithOutAside.cshtml";
+    ViewData["title"] = ViewBag.Title;
+}
+
+<link rel="stylesheet" href="~/css/login-style.css">
+
+<div class="container-login @ViewBag.Mode">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form method="post" action="SignIn" class="sign-in-form">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" pattern="[a-zA-Z][a-zA-Z0-9-_]{3,20}" id="sign-in-username" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}$" id="sign-in-password" required />
+                </div>
+                <div class="remember-me">
+                    <div class="content">
+                        <label class="checkBox">
+                            <input id="sign-in-remember-me" type="checkbox">
+                            <div class="transition"></div>
+                        </label>
+                    </div>
+                    Remember me
+                </div>
+                <input type="submit" value="Login" class="btn solid" />
+            </form>
+            <form method="post" action='@Url.Action("SignUp", "Login")' class="sign-up-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" pattern="[a-zA-Z][a-zA-Z0-9-_]{3,20}" id="sign-up-username" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email" pattern="\b[\w\.-]+@@[\w\.-]+\.\w{2,4}\b" id="sign-up-email" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}$" id="sign-up-password" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}$" id="sign-up-confirm-password"
+                           required />
+                </div>
+                <div class="remember-me">
+                    <div class="content">
+                        <label class="checkBox">
+                            <input id="sign-up-remember-me" type="checkbox">
+                            <div class="transition"></div>
+                        </label>
+                    </div>
+                    Remember me
+                </div>
+                <div class="accepts-user-agreement">
+                    <div class="content">
+                        <label class="checkBox">
+                            <input id="accept-user-agreement" type="checkbox">
+                            <div class="transition"></div>
+                        </label>
+                    </div>
+                    Accept <a href="user-agreement.html" target="_blank" style="border: none;margin: 0;padding: 0;color: var(--accent-2)"> User Agreement</a>
+                </div>
+                <input type="submit" class="btn" value="Sign up" />
+            </form>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New here ?</h3>
+                <p>
+                    Create your account and start your Cyber Oasis journey now. Sign up today!
+                </p>
+                <button class="btn transparent" id="sign-up-btn">
+                    Sign up
+                </button>
+            </div>
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>One of us ?</h3>
+                <p>
+                    Sign in to Cyber Oasis to continue where you left off.
+                </p>
+                <button class="btn transparent" id="sign-in-btn">
+                    Sign in
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="snackbar"></div>
+
+<script src="~/js/login-script.js"></script>

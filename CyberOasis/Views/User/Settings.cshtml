@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["title"] = "Settings";
+}
+
+<link rel="stylesheet" href="~/css/settings-style.css" />
+
+<main>
+    <div id="inputContainer">
+        <fieldset id="aspectRatio--group" class="inputGroup">
+            <legend class="label">Entry per page</legend>
+            <div class="segmentedControl">
+                <span class="segmentedControl--group">
+                    <input type="radio" name="entryPerPage" id="entryPerPage-5" checked />
+                    <label class="label" for="entryPerPage-5">5</label>
+                </span>
+                <span class="segmentedControl--group">
+                    <input type="radio" name="entryPerPage" id="entryPerPage-10" />
+                    <label class="label" for="entryPerPage-10">10</label>
+                </span>
+                <span class="segmentedControl--group">
+                    <input type="radio" name="entryPerPage" id="entryPerPage-15" />
+                    <label class="label" for="entryPerPage-15">15</label>
+                </span>
+                <span class="segmentedControl--group">
+                    <input type="radio" name="entryPerPage" id="entryPerPage-20" />
+                    <label class="label" for="entryPerPage-20">15</label>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+</main>
+
+<script src="~/js/settings-script.js"></script>

@@ -1,0 +1,76 @@
+.brand-area-document {
+    height: 200px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+}
+
+.brand-name-container-document {
+    display: flex;
+    gap: 5px;
+}
+
+.brand-logo-document {
+    width: 55px;
+    height: 60px;
+    background-image: url("../cyber-oasis-logo.png");
+    background-size: cover;
+}
+
+.brand-name-document {
+    color: var(--text-primary);
+    font-size: 40px;
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+    .brand-name-document:nth-child(1) {
+        color: var(--text-primary);
+    }
+
+    .brand-name-document:nth-child(2) {
+        color: var(--accent-1);
+    }
+
+
+.document-container {
+    max-width: 800px;
+    /*margin: 0 auto;*/
+    padding: 20px;
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0;
+    font-family: "Source Code Pro",sans-serif;
+    color: var(--accent-3);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+    font-family: "Source Code Pro",sans-serif;
+    color: var(--accent-2);
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-family: "Source Code Pro",sans-serif;
+    color: var(--text-primary);
+}
+
+p {
+    margin-top: 20px;
+    font-family: "Source Code Pro",sans-serif;
+    color: var(--text-second);
+}

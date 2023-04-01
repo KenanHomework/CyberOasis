@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/common-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="shortcut icon" href="~/cyber-oasis-logo.png" type="image/x-icon">
+    <title>@ViewData["Title"] | CyberOasis</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a asp-controller="Home" asp-action="Index" class="brand-area">
+                <div class="brand-logo"></div>
+                <div class="brand-name-container">
+                    <div class="brand-name">Cyber</div>
+                    <div class="brand-name">Oasis</div>
+                </div>
+            </a>
+
+            <input type="text" name="text" class="input" placeholder="Type here...">
+
+            <div class="account-action">
+                <a asp-controller="User" asp-action="Profile" class="brand-hover">
+                    <i class="fa-solid fa-user"></i>
+                    <span style="margin-left: 5px;">me</span>
+                </a>
+                <div class="dropdown">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-gears dropdown"></i>
+                    <div class="dropdown-content">
+                        <a asp-controller="User" asp-action="Settings" class="brand-hover">
+                            <i class="fa-solid fa-sliders"></i>
+                            Settings
+                        </a>
+                        <a asp-controller="Categories" asp-action="Index" class="brand-hover">
+                            <i class="fa-solid fa-layer-group"></i>
+                            Categories
+                        </a>
+                        <a asp-controller="User" asp-action="Favorities" class="brand-hover">
+                            <i class="fa-solid fa-layer-group"></i>
+                            Favorites
+                        </a>
+                    </div>
+                </div>
+                @*<a href="login.html" class="brand-hover">login</a>*@
+                @*<a href="login.html" class="brand-hover">sign up</a>*@
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-categories-container">
+                <a href="#" class="redirect-categories-header brand-hover">C</a>
+                <a href="#" class="redirect-categories-header brand-hover">C++</a>
+                <a href="#" class="redirect-categories-header brand-hover">C#</a>
+                <a href="#" class="redirect-categories-header brand-hover">Java</a>
+                <a href="#" class="redirect-categories-header brand-hover">Python</a>
+                <a href="#" class="redirect-categories-header brand-hover">ASP.Net</a>
+                <a href="#" class="redirect-categories-header brand-hover">SQL</a>
+                <a href="#" class="redirect-categories-header brand-hover">JavaScript</a>
+                <a href="#" class="redirect-categories-header brand-hover">HTML</a>
+                <a href="#" class="redirect-categories-header brand-hover">CSS</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div class="brand-slogan">
+            <div class="brand-area">
+                <div class="brand-logo"></div>
+                <div class="brand-name-container">
+                    <div class="brand-name">Cyber</div>
+                    <div class="brand-name">Oasis</div>
+                </div>
+            </div>
+            <div class="slogan">&bdquo; An oasis of knowledge."</div>
+        </div>
+        <nav>
+            <a asp-controller="Documentation" asp-action="PrivacyPolicy" class="brand-hover">Privacy & Policy</a>
+            <a asp-controller="Documentation" asp-action="TermsConditions" class="brand-hover">TERMS & CONDITIONS</a>
+        </nav>
+        <div class="copyright">© <span id="year"></span> Cyber Oasis All Rights Reserved</div>
+    </footer>
+    <script src="~/js/common-script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

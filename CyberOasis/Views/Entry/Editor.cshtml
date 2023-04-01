@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutWithOutAside.cshtml";
+    ViewData["title"] = "Editor";
+}
+
+<link rel="stylesheet" href="~/css/entry-editor-style.css" />
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+<div class="container">
+    <form>
+        <div class="form-header">
+            <div class="title-container">
+                <div class="title">entry editor</div>
+            </div>
+            <div class="form-action">
+                <a href="#" class="discard">Discard</a>
+                <a href="#" class="publish">Publish</a>
+            </div>
+        </div>
+        <div class="entry-main-infos">
+            <input type="text" name="text" class="input entry-input" placeholder="Entry Title">
+            <input type="text" name="text" class="input entry-input" placeholder="Entry Description">
+            <div class="select-container">
+                <div class="select">
+                    <input type="text" id="input" placeholder="select" onfocus="this.blur();">
+                </div>
+                <div class="option-container">
+                    <div class="option">
+                        <label> Html </label>
+                    </div>
+                    <div class="option">
+                        <label>CSS</label>
+                    </div>
+                    <div class="option">
+                        <label>JavaScript</label>
+                    </div>
+                    <div class="option">
+                        <label>Python</label>
+                    </div>
+                    <div class="option">
+                        <label>PHP</label>
+                    </div>
+                    <div class="option">
+                        <label>MySQL</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="summernote"></div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<script src="~/js/entry-editor-script.js"></script>

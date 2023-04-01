@@ -1,0 +1,196 @@
+:root {
+    --focus-style: dotted 2px var(--accent-1-darker);
+    --focus-offset: 2px;
+}
+
+
+#inputContainer {
+    margin: 0 auto;
+    max-width: 50em;
+    padding: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.inputGroup {
+    border: none;
+    display: block;
+    margin: 0 0 1.5em;
+}
+
+.label {
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "Source Code Pro",sans-serif;
+    color: var(--text-primary);
+    line-height: 1.25em;
+    margin: 0 0 0.6em;
+    padding: 0;
+    text-transform: lowercase;
+}
+
+span label {
+    cursor: pointer;
+}
+
+.segmentedControl {
+    --options: 4;
+    --options-active: 1;
+    --options-gap: .5em;
+    width: calc(calc((200px + ((var(--options) * var(--options-gap)) * 2)) / var(--options) ) * ( var(--options) + 1 ));
+    background: var(--background-2);
+    border: solid 1px var(--accent-1-darker);
+    border-radius: 0.25em;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+    .segmentedControl .segmentedControl--group {
+        flex: 0 0 auto;
+        margin: var(--options-gap);
+        width: calc((200px + ((var(--options) * var(--options-gap)) * 2)) / var(--options));
+        display: flex;
+        flex-flow: row;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+
+        .segmentedControl .segmentedControl--group input {
+            opacity: 0;
+            position: absolute;
+        }
+
+            .segmentedControl .segmentedControl--group input + label {
+                border-radius: 0.25em;
+                flex: 1 1 100%;
+                font-size: 1.25em;
+                font-weight: normal;
+                font-family: "Source Code Pro",sans-serif;
+                line-height: 1;
+                margin: 0;
+                padding: 0.5em 0;
+                position: relative;
+                text-align: center;
+                -webkit-tap-highlight-color: transparent;
+                z-index: 1;
+            }
+
+                .segmentedControl .segmentedControl--group input + label::before, .segmentedControl .segmentedControl--group input + label::after {
+                    border-radius: inherit;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: -1;
+                }
+
+                .segmentedControl .segmentedControl--group input + label::before {
+                    background: var(--accent-1-darker);
+                    transition: opacity 0.15s ease;
+                }
+
+                .segmentedControl .segmentedControl--group input + label::after {
+                    transition: opacity 0.15s ease;
+                }
+
+                .segmentedControl .segmentedControl--group input + label:hover::before {
+                    opacity: 1;
+                }
+
+            .segmentedControl .segmentedControl--group input:focus + label {
+                outline: none;
+            }
+
+            .segmentedControl .segmentedControl--group input:focus-visible + label {
+                outline: var(--focus-style);
+                outline-offset: var(--focus-offset);
+            }
+
+            .segmentedControl .segmentedControl--group input:-moz-focusring + label {
+                outline: var(--focus-style);
+                outline-offset: var(--focus-offset);
+            }
+
+            .segmentedControl .segmentedControl--group input:checked + label {
+                color: var(--text-primary);
+                font-weight: 700;
+            }
+
+                .segmentedControl .segmentedControl--group input:checked + label::after {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+@media (prefers-reduced-motion: no-preference) {
+    .segmentedControl .segmentedControl--group input + label {
+        transition: color 0.2s ease;
+    }
+
+        .segmentedControl .segmentedControl--group input + label::before {
+            transition: opacity 0.3s ease;
+        }
+
+        .segmentedControl .segmentedControl--group input + label::after {
+            transform: scale(0.85, 0.5);
+            transition: opacity 0.15s ease, transform 0.3s cubic-bezier(0, 0.99, 0.52, 1.29);
+        }
+
+    .segmentedControl.useSlidingAnimation::before {
+        background: var(--accent-1-darker);
+        border-radius: 0.375em;
+        content: "";
+        display: block;
+        height: calc(100% - (var(--options-gap) * 2));
+        position: absolute;
+        top: var(--options-gap);
+        left: var(--options-gap);
+        transform: translateX(calc((100% + (var(--options-gap) * 2)) * (var(--options-active) - 1)));
+        transition: transform cubic-bezier(0.8, 0.34, 0.28, 1.15) 0.35s;
+        width: calc((100% - ((var(--options) * var(--options-gap)) * 2)) / var(--options));
+    }
+
+    .segmentedControl.useSlidingAnimation .segmentedControl--group input + label {
+        background: none;
+        transition: color 0.3s ease;
+    }
+
+        .segmentedControl.useSlidingAnimation .segmentedControl--group input + label::after {
+            content: none;
+        }
+
+    .segmentedControl.useSlidingAnimation .segmentedControl--group input:checked + label:hover::before {
+        opacity: 0;
+    }
+}
+
+/* utilities */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.offscreen {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}

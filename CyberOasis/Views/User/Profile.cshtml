@@ -1,0 +1,228 @@
+﻿@{
+    ViewData["title"] = "Profile";
+}
+
+<link rel="stylesheet" href="~/css/profile-style.css" />
+
+<main>
+    <div class="profile-container">
+        <div class="username">kananysbv</div>
+        <div class="user-bio"> yazdıklarım seni üzebilir. takılma.</div>
+        <div class="number-info-container">
+            <div class="number-info separate-number-info">
+                <div class="number-info-count">822</div>
+                <div class="number-info-title">entry</div>
+            </div>
+            <div class="number-info separate-number-info">
+                <div class="number-info-count">10</div>
+                <div class="number-info-title">followers</div>
+            </div>
+            <div class="number-info">
+                <div class="number-info-count">0</div>
+                <div class="number-info-title">following</div>
+            </div>
+        </div>
+        <div class="user-action">
+            <a id="user-relation" href="#" onclick="toggleFollow()" class="follow"></a>
+            <div class="dropdown">
+                <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                <div class="dropdown-content">
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-link"></i>
+                        copy profile link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+            <div class="entry-description">This entry about design patterns of c#.</div>
+        </div>
+        <div class="entry-footer">
+            <div class="rate-options">
+                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                <div class="favorite">
+                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                    <div class="favorite-count">209</div>
+                </div>
+                <div class="dropdown share-dropdown ">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                    <div class="dropdown-content">
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-link"></i>
+                            Copy Entry Link
+                        </a>
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Copy Entry ID
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="entry-info">
+                <a class="entry-category">C#</a>
+                <div class="entry-info-right">
+                    <a class="author-name brand-hover">kananysbv</a>
+                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+            <div class="entry-description">This entry about design patterns of c#.</div>
+        </div>
+        <div class="entry-footer">
+            <div class="rate-options">
+                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                <div class="favorite">
+                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                    <div class="favorite-count">209</div>
+                </div>
+                <div class="dropdown share-dropdown">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                    <div class="dropdown-content">
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-link"></i>
+                            Copy Entry Link
+                        </a>
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Copy Entry ID
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="entry-info">
+                <a class="entry-category">C#</a>
+                <div class="entry-info-right">
+                    <a class="author-name brand-hover">kananysbv</a>
+                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+            <div class="entry-description">This entry about design patterns of c#.</div>
+        </div>
+        <div class="entry-footer">
+            <div class="rate-options">
+                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                <div class="favorite">
+                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                    <div class="favorite-count">209</div>
+                </div>
+                <div class="dropdown share-dropdown">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                    <div class="dropdown-content">
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-link"></i>
+                            Copy Entry Link
+                        </a>
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Copy Entry ID
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="entry-info">
+                <a class="entry-category">C#</a>
+                <div class="entry-info-right">
+                    <a class="author-name brand-hover">kananysbv</a>
+                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+            <div class="entry-description">This entry about design patterns of c#.</div>
+        </div>
+        <div class="entry-footer">
+            <div class="rate-options">
+                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                <div class="favorite">
+                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                    <div class="favorite-count">209</div>
+                </div>
+                <div class="dropdown share-dropdown">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                    <div class="dropdown-content">
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-link"></i>
+                            Copy Entry Link
+                        </a>
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Copy Entry ID
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="entry-info">
+                <a class="entry-category">C#</a>
+                <div class="entry-info-right">
+                    <a class="author-name brand-hover">kananysbv</a>
+                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+            <div class="entry-description">This entry about design patterns of c#.</div>
+        </div>
+        <div class="entry-footer">
+            <div class="rate-options">
+                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                <div class="favorite">
+                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                    <div class="favorite-count">209</div>
+                </div>
+                <div class="dropdown share-dropdown">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown "></i>
+                    <div class="dropdown-content">
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-link"></i>
+                            Copy Entry Link
+                        </a>
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Copy Entry ID
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="entry-info">
+                <a class="entry-category">C#</a>
+                <div class="entry-info-right">
+                    <a class="author-name brand-hover">kananysbv</a>
+                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleFollow() {
+        document.querySelector("#user-relation").classList.toggle("follow");
+        document.querySelector("#user-relation").classList.toggle("following");
+        // if (document.querySelector("#user-relation").classList.contains("follow")) {
+        //     document.querySelector("#user-relation").classList.add("unfollow");
+        // }
+    }
+</script>

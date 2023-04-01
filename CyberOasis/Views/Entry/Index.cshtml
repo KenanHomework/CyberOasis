@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["title"] = "Entry Name";
+}
+
+<link rel="stylesheet" href="~/css/view-entry-style.css" />
+
+<main>
+    <div class="entry-header-container">
+        <div class="entry-action">
+            <div class="vote-action up-vote">
+                <i class="fa-regular fa-square-caret-up"></i>
+                <span>20</span>
+            </div>
+            <div class="vote-action down-vote">
+                <i class="fa-regular fa-square-caret-down"></i>
+                <span>10</span>
+            </div>
+            <div class="favorite">
+                <i class="fa-solid fa-droplet favorite-icon"></i>
+                <span>209</span>
+            </div>
+        </div>
+        <div class="entry-info-container">
+            <div class="entry-title-container">
+                <div class="entry-title">Lorem ipsum dolor sit amet, consectetur at</div>
+                <div class="entry-description">Lorem ipsum dolor sivoluptates? Alias archit</div>
+            </div>
+            <div class="entry-footer">
+                <a class="entry-category">JavaScript</a>
+                <div class="dropdown entry-view-share">
+                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown "></i>
+                    <div class="dropdown-content">
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-link"></i>
+                            Copy Entry Link
+                        </a>
+                        <a href="#" class="brand-hover">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Copy Entry ID
+                        </a>
+                    </div>
+                </div>
+                <div class="author-info-container">
+                    <div class="author-name">kananysbv</div>
+                    <div class="entry-info-date">24.03.2023</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,54 @@
+main{
+    padding: 10px;
+}
+
+.main-header{
+    font-family: "Source Code Pro",sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    text-transform: lowercase;
+    color: var(--text-second);
+
+    margin-bottom: 20px;
+}
+
+.categories-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category{
+    width: 650px;
+    height: 75px;
+
+    box-sizing: border-box;
+    padding: 10px 10px ;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: .2s;
+}
+
+.category-title{
+    font-family: "Source Code Pro",sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+.category-description{
+    font-family: "Source Code Pro",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-second);
+    text-transform: lowercase;
+}
+
+.category:hover{
+    border-color: var(--accent-3);
+}

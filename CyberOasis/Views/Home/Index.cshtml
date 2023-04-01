@@ -1,0 +1,377 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<link rel="stylesheet" href="~/lib/splide/splide.min.css">
+<link rel="stylesheet" href="~/css/index-style.css">
+
+
+<div class="editors-choice">
+    <div class="editors-choice-header">editors choice</div>
+    <section class="splide" aria-labelledby="carousel-heading" style="width: 700px;height: 250px;padding-top: 10%">
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev" style="background-color: transparent;color: var(--accent-3);width: 40px;height: 40px">
+                <i class="fa-solid fa-angles-up" style="font-size: 30px"></i>
+            </button>
+            <button class="splide__arrow splide__arrow--next" style="background-color: transparent;color: var(--accent-3);width: 40px;height: 40px">
+                <i class="fa-solid fa-angles-down" style="font-size: 30px"></i>
+            </button>
+        </div>
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+                            <div class="entry-description">This entry about design patterns of c#.</div>
+                        </div>
+                        <div class="entry-footer">
+                            <div class="rate-options">
+                                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                                <div class="favorite">
+                                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                                    <div class="favorite-count">209</div>
+                                </div>
+                                <div class="dropdown share-dropdown ">
+                                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                                    <div class="dropdown-content left-content">
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-link"></i>
+                                            Copy Entry Link
+                                        </a>
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-hashtag"></i>
+                                            Copy Entry ID
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-info">
+                                <div>
+                                    <a class="entry-category">C#</a>
+                                    <i class="fa-solid fa-star" style="color: var(--accent-1);margin-left: 10px;"></i>
+                                </div>
+                                <div class="entry-info-right">
+                                    <a class="author-name brand-hover">kananysbv</a>
+                                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+                            <div class="entry-description">This entry about design patterns of c#.</div>
+                        </div>
+                        <div class="entry-footer">
+                            <div class="rate-options">
+                                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                                <div class="favorite">
+                                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                                    <div class="favorite-count">209</div>
+                                </div>
+                                <div class="dropdown share-dropdown ">
+                                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                                    <div class="dropdown-content left-content">
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-link"></i>
+                                            Copy Entry Link
+                                        </a>
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-hashtag"></i>
+                                            Copy Entry ID
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-info">
+                                <div>
+                                    <a class="entry-category">C#</a>
+                                    <i class="fa-solid fa-star" style="color: var(--accent-1);margin-left: 10px;"></i>
+                                </div>
+                                <div class="entry-info-right">
+                                    <a class="author-name brand-hover">kananysbv</a>
+                                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+                            <div class="entry-description">This entry about design patterns of c#.</div>
+                        </div>
+                        <div class="entry-footer">
+                            <div class="rate-options">
+                                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                                <div class="favorite">
+                                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                                    <div class="favorite-count">209</div>
+                                </div>
+                                <div class="dropdown share-dropdown ">
+                                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                                    <div class="dropdown-content left-content">
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-link"></i>
+                                            Copy Entry Link
+                                        </a>
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-hashtag"></i>
+                                            Copy Entry ID
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-info">
+                                <div>
+                                    <a class="entry-category">C#</a>
+                                    <i class="fa-solid fa-star" style="color: var(--accent-1);margin-left: 10px;"></i>
+                                </div>
+                                <div class="entry-info-right">
+                                    <a class="author-name brand-hover">kananysbv</a>
+                                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+                            <div class="entry-description">This entry about design patterns of c#.</div>
+                        </div>
+                        <div class="entry-footer">
+                            <div class="rate-options">
+                                <i class="fa-regular fa-square-caret-up up-vote"></i>
+                                <i class="fa-regular fa-square-caret-down down-vote"></i>
+                                <div class="favorite">
+                                    <i class="fa-solid fa-droplet favorite-icon"></i>
+                                    <div class="favorite-count">209</div>
+                                </div>
+                                <div class="dropdown share-dropdown ">
+                                    <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                                    <div class="dropdown-content left-content">
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-link"></i>
+                                            Copy Entry Link
+                                        </a>
+                                        <a href="#" class="brand-hover">
+                                            <i class="fa-solid fa-hashtag"></i>
+                                            Copy Entry ID
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-info">
+                                <div>
+                                    <a class="entry-category">C#</a>
+                                    <i class="fa-solid fa-star" style="color: var(--accent-1);margin-left: 10px;"></i>
+                                </div>
+                                <div class="entry-info-right">
+                                    <a class="author-name brand-hover">kananysbv</a>
+                                    <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="splide__progress">
+            <div class="splide__progress__bar" style="height: 3px; background: var(--accent-1-darker);">
+            </div>
+        </div>
+    </section>
+</div>
+<div class="entry">
+    <div class="entry-header">
+        <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+        <div class="entry-description">This entry about design patterns of c#.</div>
+    </div>
+    <div class="entry-footer">
+        <div class="rate-options">
+            <i class="fa-regular fa-square-caret-up up-vote"></i>
+            <i class="fa-regular fa-square-caret-down down-vote"></i>
+            <div class="favorite">
+                <i class="fa-solid fa-droplet favorite-icon"></i>
+                <div class="favorite-count">209</div>
+            </div>
+            <div class="dropdown share-dropdown ">
+                <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                <div class="dropdown-content">
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-link"></i>
+                        Copy Entry Link
+                    </a>
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-hashtag"></i>
+                        Copy Entry ID
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="entry-info">
+            <a class="entry-category">C#</a>
+            <div class="entry-info-right">
+                <a class="author-name brand-hover">kananysbv</a>
+                <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="entry">
+    <div class="entry-header">
+        <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+        <div class="entry-description">This entry about design patterns of c#.</div>
+    </div>
+    <div class="entry-footer">
+        <div class="rate-options">
+            <i class="fa-regular fa-square-caret-up up-vote"></i>
+            <i class="fa-regular fa-square-caret-down down-vote"></i>
+            <div class="favorite">
+                <i class="fa-solid fa-droplet favorite-icon"></i>
+                <div class="favorite-count">209</div>
+            </div>
+            <div class="dropdown share-dropdown">
+                <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                <div class="dropdown-content">
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-link"></i>
+                        Copy Entry Link
+                    </a>
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-hashtag"></i>
+                        Copy Entry ID
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="entry-info">
+            <a class="entry-category">C#</a>
+            <div class="entry-info-right">
+                <a class="author-name brand-hover">kananysbv</a>
+                <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="entry">
+    <div class="entry-header">
+        <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+        <div class="entry-description">This entry about design patterns of c#.</div>
+    </div>
+    <div class="entry-footer">
+        <div class="rate-options">
+            <i class="fa-regular fa-square-caret-up up-vote"></i>
+            <i class="fa-regular fa-square-caret-down down-vote"></i>
+            <div class="favorite">
+                <i class="fa-solid fa-droplet favorite-icon"></i>
+                <div class="favorite-count">209</div>
+            </div>
+            <div class="dropdown share-dropdown">
+                <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                <div class="dropdown-content">
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-link"></i>
+                        Copy Entry Link
+                    </a>
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-hashtag"></i>
+                        Copy Entry ID
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="entry-info">
+            <a class="entry-category">C#</a>
+            <div class="entry-info-right">
+                <a class="author-name brand-hover">kananysbv</a>
+                <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="entry">
+    <div class="entry-header">
+        <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+        <div class="entry-description">This entry about design patterns of c#.</div>
+    </div>
+    <div class="entry-footer">
+        <div class="rate-options">
+            <i class="fa-regular fa-square-caret-up up-vote"></i>
+            <i class="fa-regular fa-square-caret-down down-vote"></i>
+            <div class="favorite">
+                <i class="fa-solid fa-droplet favorite-icon"></i>
+                <div class="favorite-count">209</div>
+            </div>
+            <div class="dropdown share-dropdown">
+                <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown"></i>
+                <div class="dropdown-content">
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-link"></i>
+                        Copy Entry Link
+                    </a>
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-hashtag"></i>
+                        Copy Entry ID
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="entry-info">
+            <a class="entry-category">C#</a>
+            <div class="entry-info-right">
+                <a class="author-name brand-hover">kananysbv</a>
+                <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="entry">
+    <div class="entry-header">
+        <a href="#" class="entry-title brand-hover">Lorem ipsum dolor sit amet..</a>
+        <div class="entry-description">This entry about design patterns of c#.</div>
+    </div>
+    <div class="entry-footer">
+        <div class="rate-options">
+            <i class="fa-regular fa-square-caret-up up-vote"></i>
+            <i class="fa-regular fa-square-caret-down down-vote"></i>
+            <div class="favorite">
+                <i class="fa-solid fa-droplet favorite-icon"></i>
+                <div class="favorite-count">209</div>
+            </div>
+            <div class="dropdown share-dropdown">
+                <i onclick="toggleShow(this)" class="fa-solid fa-arrow-up-from-bracket dropdown "></i>
+                <div class="dropdown-content">
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-link"></i>
+                        Copy Entry Link
+                    </a>
+                    <a href="#" class="brand-hover">
+                        <i class="fa-solid fa-hashtag"></i>
+                        Copy Entry ID
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="entry-info">
+            <a class="entry-category">C#</a>
+            <div class="entry-info-right">
+                <a class="author-name brand-hover">kananysbv</a>
+                <div class="entry-info-date">15/03/2023 ~ 13:44</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/common-script.js"></script>
+<script src="~/lib/splide/splide.js"></script>
+<script src="~/js/home-index-script.js"></script>
